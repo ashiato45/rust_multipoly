@@ -12,25 +12,30 @@ fn main() {
 }
 
 trait Field{
-    fn zero(&self) -> Self;
-    fn one(&self) -> Self;
-    fn minus(&self, x: &Self) -> Self;
-    // fn recipro(&self);
-    // fn subtr(&self);
+    fn zero() -> Self;
+    fn one() -> Self;
+    fn minus(&self) -> Self;
+    // fn recipro(&self) -> Option<Self>;
+    // fn subtr(&self), x: &Self, y: &Self) -> Self {
+    //     self.add(x, y.minus())
+    // }
     // fn mult(&self);
     // fn div(&self);
 }
 
 impl Field for BigRational{
-    fn zero(&self) -> BigRational{
+    fn zero() -> BigRational{
         make_bigrat(0, 1)
     }
-    fn one(&self) -> BigRational{
+    fn one() -> BigRational{
         make_bigrat(1, 1)
     }
-    fn minus(&self, x: &BigRational) -> BigRational{
-        -x
+    fn minus(&self) -> BigRational{
+        -self
     }
+    // fn recipro(&self, x: &BigRational) -> Option<BigRational>{
+    //     if(x == )
+    // }
 
 }
 
